@@ -1,3 +1,3 @@
 ## Bookworm
 
-The beginning of a book app.
+Server side built with Mongoose schema and a MongoDB database
