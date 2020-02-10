@@ -1,0 +1,30 @@
+{
+  "name": "bookworm",
+  "version": "1.0.0",
+  "description": "Book application powered by google books",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmirVelazquez/bookworm.git"
+  },
+  "author": "ELV",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EmirVelazquez/bookworm/issues"
+  },
+  "homepage": "https://github.com/EmirVelazquez/bookworm#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "if-env": "^1.0.4",
+    "mongoose": "^5.8.11"
+  },
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "nodemon": "^2.0.2"
+  }
+}
