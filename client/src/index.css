@@ -1,4 +1,11 @@
 body {
   background-color: #ff5d73;
-  font-family: "Merriweather", serif;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
 }

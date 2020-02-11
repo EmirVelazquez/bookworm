@@ -1,5 +1,15 @@
-#appContainer {
-  background-color: aquamarine;
-  margin: 0 10px 0 310px;
-  width: 100%;
+/* Offset content by the width of the side menu */
+header,
+main,
+footer {
+  padding-left: 300px;
 }
+
+@media only screen and (max-width: 992px) {
+  header,
+  main,
+  footer {
+    padding-left: 0;
+  }
+}
+/* Offset content by the width of the side menu */

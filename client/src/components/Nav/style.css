@@ -8,7 +8,7 @@ nav.top-nav {
   padding-top: 5px;
   float: right;
   font-size: 40px;
-  font-family: "Roboto", sans-serif;
+  font-family: "Merriweather", serif;
 }
 
 #bookwormLogo {
@@ -27,7 +27,7 @@ nav.top-nav {
   opacity: 1;
 }
 
-.search-wrapper {
+.searchWrapper {
   list-style: none;
   white-space: nowrap;
   width: 300px;
@@ -37,14 +37,28 @@ nav.top-nav {
 .material-icons,
 #search {
   display: inline-block;
-  width: 80%;
+  width: 77%;
   border: none;
 }
 
+.searchBtn {
+  height: 30px;
+  width: 30px;
+  align-items: center;
+  text-align: center;
+  padding: 0 1px 0 1px;
+  background-color: #ff5d73;
+  border: 1px solid #000000;
+}
+
 .material-icons {
-  color: #b6b2be;
+  color: #000000;
 }
 
 .menu {
   color: #000000;
+}
+
+.menuContainer {
+  border: 1px solid #000000;
 }
