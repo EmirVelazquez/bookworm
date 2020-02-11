@@ -1,7 +1,3 @@
-nav {
-  background-color: aquamarine;
-}
-
 nav.top-nav {
   background-color: transparent;
   color: #000000;
@@ -16,10 +12,39 @@ nav.top-nav {
 }
 
 #bookwormLogo {
-  margin: 10px 0 0 0;
+  margin: 10px 0 0 10px;
   width: 70px;
 }
 
 #search {
-  margin: 20px 0 0 0;
+  margin: 100px 0 0 0;
+  padding: 0 0 0 30px;
+  width: 100%;
+}
+
+::placeholder {
+  color: #b6b2be;
+  opacity: 1;
+}
+
+.search-wrapper {
+  list-style: none;
+  white-space: nowrap;
+  width: 300px;
+  border-bottom: 1px solid #b6b2be;
+}
+
+.material-icons,
+#search {
+  display: inline-block;
+  width: 80%;
+  border: none;
+}
+
+.material-icons {
+  color: #b6b2be;
+}
+
+.menu {
+  color: #000000;
 }

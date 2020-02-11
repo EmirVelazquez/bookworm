@@ -16,7 +16,7 @@ const Nav = () => {
                     data-target="nav-mobile"
                     className="top-nav sidenav-trigger full hide-on-large-only"
                   >
-                    <i className="material-icons">menu</i>
+                    <i className="material-icons menu">menu</i>
                   </div>
                 </div>
                 <h1 className="header">Bookworm</h1>
@@ -26,18 +26,17 @@ const Nav = () => {
         </div>
       </nav>
       <ul id="nav-mobile" className="sidenav sidenav-fixed">
-        <li className="logo">
-          <a id="logo-container" href="/" className="sidenav-close brand-logo">
-            <img src={bookwormLogo} alt="Bookworm Logo" id="bookwormLogo" />
-          </a>
-        </li>
+        <a id="logo-container" href="/" className="sidenav-close brand-logo">
+          <img src={bookwormLogo} alt="Bookworm Logo" id="bookwormLogo" />
+        </a>
         <li className="search">
           <div className="search-wrapper">
             <input
               id="search"
               placeholder="Search"
-              className={"addProp:sidenav-close"}
+              className={"needToaddProp=sidenav-close"}
             />
+            <i className="material-icons">search</i>
           </div>
         </li>
         <li className="bold">
