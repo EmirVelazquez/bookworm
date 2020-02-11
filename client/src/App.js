@@ -1,21 +1,19 @@
-import React from "react";
+import React, { Component } from "react";
+import Nav from "./components/Nav";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>The Beginning</p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      // Materialize class='container' are set to 70% of the window width by default
+      <React.Fragment>
+        <header>
+          <Nav />
+        </header>
+        <div id="appContainer"></div>
+      </React.Fragment>
+    );
+  }
 }
 
 export default App;
