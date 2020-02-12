@@ -1,7 +1,7 @@
 import React from "react";
 import "./Pages.css";
 
-const Books = () => {
+const Books = props => {
   return (
     <div className="container bodyContainer">
       <div className="row">
@@ -15,6 +15,7 @@ const Books = () => {
                 consumption.
               </p>
             </div>
+            <p>You searched for: {props.search}</p>
             <div className="card-action">
               <a href="/404">Dead Link</a>
               <a href="/404">This is a link</a>

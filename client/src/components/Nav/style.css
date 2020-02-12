@@ -51,6 +51,10 @@ nav.top-nav {
   border: 1px solid #000000;
 }
 
+.searchBtn:hover {
+  background-color: #ffffff;
+}
+
 .material-icons {
   color: #000000;
 }
