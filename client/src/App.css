@@ -13,3 +13,15 @@ footer {
   }
 }
 /* Offset content by the width of the side menu */
+
+body {
+  background-color: #ff5d73;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}

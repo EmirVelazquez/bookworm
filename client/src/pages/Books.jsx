@@ -1,4 +1,5 @@
 import React from "react";
+import BookCard from "../components/BookCard";
 import "./Pages.css";
 
 const Books = props => {
@@ -15,7 +16,18 @@ const Books = props => {
                 consumption.
               </p>
             </div>
-            <p>You searched for: {props.search}</p>
+            <p>You searched for:</p>
+
+            <BookCard
+              key={props._id}
+              id={props._id}
+              title={props.title}
+              author={props.author}
+              synopsis={props.synopsis}
+              image={props.image}
+              link={props.link}
+            />
+
             <div className="card-action">
               <a href="/404">Dead Link</a>
               <a href="/404">This is a link</a>

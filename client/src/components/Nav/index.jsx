@@ -32,16 +32,16 @@ const Nav = props => {
         <li className="search">
           <form className="searchWrapper">
             <input
-              value={props.search}
+              value={props.searchValue} // Sending a request to the parent component => app.js
               type="text"
               name="search"
-              onChange={props.handleChange}
+              onChange={props.searchBoxChange} // Sending a request to the parent component => app.js
               // If any key is pressed, check for enter key. If it's enter prevent submit of form.
               onKeyPress={e => {
                 if (e.key === "Enter") {
                   e.preventDefault();
                   // Then run handleSubmit handler
-                  props.handleSubmit();
+                  props.submitSearch(); // Sending a request to the parent component => app.js
                 }
               }}
               placeholder="Book Search"
@@ -50,7 +50,7 @@ const Nav = props => {
             <button
               className="btn-small waves-effect waves-light searchBtn"
               type="button"
-              onClick={props.handleSubmit}
+              onClick={props.submitSearch} // Sending a request to the parent component => app.js
             >
               <i className="material-icons">search</i>
             </button>

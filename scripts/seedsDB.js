@@ -20,7 +20,8 @@ const bookSeed = [
     image:
       "https://books.google.com/books/content?id=iyfgqV5dxXQC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE70XidU6Piffszwx67EHBYEFqr3i0wU3hq7LMq1Cx6ySy8CgjXX5mXnF9YjkyIQu6RqCNT9u7vJOKjlIi-poyj99jmba2Q8ETLcBlC9nrf3cvpkbedE6fvyeSzEFoWn7KKXomhb3",
     link:
-      "https://books.google.com/books?id=iyfgqV5dxXQC&newbks=1&newbks_redir=0&dq=title:+lord+of+the+flies&source=gbs_navlinks_s"
+      "https://books.google.com/books?id=iyfgqV5dxXQC&newbks=1&newbks_redir=0&dq=title:+lord+of+the+flies&source=gbs_navlinks_s",
+    date: new Date(Date.now())
   },
   {
     title: "The Catcher in the Rye",
@@ -30,7 +31,8 @@ const bookSeed = [
     image:
       "https://books.google.com/books/content?id=FqSiDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE71A1YWnR7QErqfK1ypTPpR7eTsqG96kiwu0YrhP5LFawH3mOyFemluIvlj6Rj5jS_Iq59qbY6Ye6_jzSmMw1KaOvee1dti0Mi1m_Rh4DgABvL19mKkpOpgTWbRDCgc3HaEm1rrO",
     link:
-      "https://books.google.com/books?id=FqSiDwAAQBAJ&newbks=1&newbks_redir=0&dq=title:+the+catcher+in+the+rye&source=gbs_navlinks_s"
+      "https://books.google.com/books?id=FqSiDwAAQBAJ&newbks=1&newbks_redir=0&dq=title:+the+catcher+in+the+rye&source=gbs_navlinks_s",
+    date: new Date(Date.now())
   },
   {
     title: "Total Recall: My Unbelievably True Life Story",
@@ -40,7 +42,8 @@ const bookSeed = [
     image:
       "https://books.google.com/books/content?id=qYijfgz4acgC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE70OC1KOMwdipId3Q2JWQviOr7VNHkG5AHRWKpcni5obY2jW-_15Ns_AZwtTcMH1CqLoz7RDL5nlEhvrjhzaRhQvEjqJy_rRHmu68GfE2I-Us91Htc9V2vx_xaFKPcKSNsi9F0qs",
     link:
-      "https://books.google.com/books?id=qYijfgz4acgC&newbks=1&newbks_redir=0&dq=Total+Recall:+My+Unbelievably+True+Life+Story&source=gbs_navlinks_s"
+      "https://books.google.com/books?id=qYijfgz4acgC&newbks=1&newbks_redir=0&dq=Total+Recall:+My+Unbelievably+True+Life+Story&source=gbs_navlinks_s",
+    date: new Date(Date.now())
   },
   {
     title: "Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future",
@@ -50,7 +53,8 @@ const bookSeed = [
     image:
       "https://books.google.com/books/content?id=Ma4sjwEACAAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE73JXyupVQcejhMW1NmMZEELQEo3qVt6wTSMjAU_fj5srqH1OJ6tjEM7OdpxIKl8dRc4wxyWcr6sefK_apS4ZV07BPWPTRzPRScG8OQQfQsECF2k_9K3zuSW1lYwj_QmR3JHnWEB",
     link:
-      "https://books.google.com/books?id=Ma4sjwEACAAJ&dq=Elon+Musk:+Tesla,+SpaceX,+and+the+Quest+for+a+Fantastic+Future&hl=en&newbks=1&newbks_redir=0&sa=X&ved=2ahUKEwiWxKHQ1MfnAhVJR60KHWLGBLAQ6wEwAHoECAAQAQ"
+      "https://books.google.com/books?id=Ma4sjwEACAAJ&dq=Elon+Musk:+Tesla,+SpaceX,+and+the+Quest+for+a+Fantastic+Future&hl=en&newbks=1&newbks_redir=0&sa=X&ved=2ahUKEwiWxKHQ1MfnAhVJR60KHWLGBLAQ6wEwAHoECAAQAQ",
+    date: new Date(Date.now())
   },
   {
     title: "1984",
@@ -60,7 +64,8 @@ const bookSeed = [
     image:
       "https://books.google.com/books/content?id=kotPYEqx7kMC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE71apwe66BdFFaxC0dEzWTbfDbOtpug09SfIWl0IbZxGJswoYMgIH08gUCNVuiby1IqYs5TBR4L3Jlh1u3N9MlRNWLXczcSNZHkrtPkQIEHleAgAzS8_EkJHdctQrl2_1C50VPVN",
     link:
-      "https://books.google.com/books?id=kotPYEqx7kMC&newbks=1&newbks_redir=0&dq=1984&source=gbs_navlinks_s"
+      "https://books.google.com/books?id=kotPYEqx7kMC&newbks=1&newbks_redir=0&dq=1984&source=gbs_navlinks_s",
+    date: new Date(Date.now())
   },
   {
     title: "The Great Gatsby",
@@ -70,7 +75,8 @@ const bookSeed = [
     image:
       "https://books.google.com/books/content?id=iWA-DwAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE70c8eKclZCK5fsXs056Qyoumf8_dnGWRwoqrroEuElGqXQowEc9VwmLEk2634OOnK3gDEfe5DnPB-d_QYBIr4-uTtaJH59htSpdaqrgBiG7cauBuwqTRGNB0vEzfuFEHhMqSgJr",
     link:
-      "https://books.google.com/books?id=iWA-DwAAQBAJ&dq=The+Great+Gatsby&hl=en&newbks=1&newbks_redir=0&sa=X&ved=2ahUKEwiDhvv_1MfnAhVIKqwKHf8ADVoQ6wEwAHoECAUQAQ"
+      "https://books.google.com/books?id=iWA-DwAAQBAJ&dq=The+Great+Gatsby&hl=en&newbks=1&newbks_redir=0&sa=X&ved=2ahUKEwiDhvv_1MfnAhVIKqwKHf8ADVoQ6wEwAHoECAUQAQ",
+    date: new Date(Date.now())
   }
 ];
 

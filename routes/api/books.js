@@ -14,4 +14,6 @@ router
   .put(booksController.update)
   .delete(booksController.remove);
 
+// Route for "/api/books/getbook/:book"
+router.route("/getbook/:book").get(booksController.grabGoogleBooks);
 module.exports = router;
