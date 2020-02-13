@@ -11,22 +11,30 @@ import "./App.css";
 
 class App extends Component {
   state = {
+    searchedBooks: [], // Array used to hold the searches results
     search: "", // Flag state for searches
-    books: [] // Array used to hold the searches results
+    savedBooks: [],
+    isDoneLoading: false
   };
 
-  componentDidMount() {
-    this.loadBooks();
-  }
-
-  loadBooks = () => {
-    API.getBooks()
-      .then(res => {
-        this.setState({ books: res.data });
-        console.log(res.data);
-      })
-      .catch(err => console.log(err));
+  componentDidMount = () => {
+    this.setState({ isDoneLoading: true });
+    // this.loadBooks();
   };
+
+  // loadBooks = () => {
+  //   if (this.state.isLoading === true) {
+  //     API.getBooks()
+  //       .then(res => {
+  //         this.setState({ searchedBooks: res.data, isLoading: false });
+  //         console.log(res.data);
+  //       })
+  //       .catch(err => {
+  //         this.setState({ isLoading: false });
+  //         console.log(err);
+  //       });
+  //   }
+  // };
 
   handleChange = event => {
     event.preventDefault();
@@ -46,9 +54,10 @@ class App extends Component {
     const searchingForBook = this.state.search;
     // Making the api request from google books
     API.getGoogleBooks(searchingForBook)
-      .then(res => console.log(res))
+      .then(res => this.setState({ searchedBooks: res.data.items }))
+      // .then(res => console.log(res.data.items))
       .catch(err => console.log(err));
-    console.log(this.state.search); // run the api call for books here
+    console.log(this.state.search);
     // Emptying the search state so user can search for a new book should they choose to
     this.setState({ search: "" });
   };
@@ -67,9 +76,14 @@ class App extends Component {
         <Router>
           <main>
             <Switch>
-              <Route exact path="/" render={props => <Books {...props} />} />
-              <Route exact path="/books" component={Books} />
               <Route exact path="/saved" component={Saved} />
+              <Route
+                exact
+                path="/"
+                render={props => (
+                  <Books {...props} userSearch={this.state.searchedBooks} />
+                )}
+              />
               <Route exact path="/about" component={About} />
               <Route path="*" component={No404} />
             </Switch>

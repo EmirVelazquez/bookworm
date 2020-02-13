@@ -2,7 +2,21 @@ import React from "react";
 import BookCard from "../components/BookCard";
 import "./Pages.css";
 
+// class Books extends Component {
 const Books = props => {
+  // state = {
+  //   isDoneLoading: false
+  // };
+  // componentDidMount = () => {
+  //   this.setState({ isDoneLoading: true });
+  //   console.log(this);
+  //   // let searches = this.props.userSearch;
+  //   // console.log(searches);
+  // };
+
+  // render() {
+  // const test = this.props.userSearch;
+  // console.log(test);
   return (
     <div className="container bodyContainer">
       <div className="row">
@@ -16,17 +30,19 @@ const Books = props => {
                 consumption.
               </p>
             </div>
-            <p>You searched for:</p>
-
-            <BookCard
-              key={props._id}
-              id={props._id}
-              title={props.title}
-              author={props.author}
-              synopsis={props.synopsis}
-              image={props.image}
-              link={props.link}
-            />
+            <div>
+              {props.userSearch.map(props.userSearch, i => (
+                <BookCard
+                  key={i}
+                  id={i}
+                  bookTitle={props.userSearch.volumeInfo.title}
+                  bookAuthor={props.userSearch.volumeInfo.authors[0]}
+                  bookSynopsis={props.userSearch.volumeInfo.description}
+                  bookImage={props.userSearch.imageLinks.thumbnail}
+                  bookLink={props.userSearch.infoLink}
+                />
+              ))}
+            </div>
 
             <div className="card-action">
               <a href="/404">Dead Link</a>
@@ -37,6 +53,7 @@ const Books = props => {
       </div>
     </div>
   );
+  // }
 };
 
 export default Books;

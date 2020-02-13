@@ -1,10 +1,11 @@
 import React, { Component } from "react";
+import "./Pages.css";
 
 class No404 extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="container">
+        <div className="container bodyContainer">
           <h1>
             <span role="img" aria-label="Face With Rolling Eyes Emoji">
               🙄
