@@ -13,28 +13,23 @@ class App extends Component {
   state = {
     searchedBooks: [], // Array used to hold the searches results
     search: "", // Flag state for searches
-    savedBooks: [],
-    isDoneLoading: false
+    savedBooks: []
   };
 
   componentDidMount = () => {
-    this.setState({ isDoneLoading: true });
-    // this.loadBooks();
+    this.loadBooks();
   };
 
-  // loadBooks = () => {
-  //   if (this.state.isLoading === true) {
-  //     API.getBooks()
-  //       .then(res => {
-  //         this.setState({ searchedBooks: res.data, isLoading: false });
-  //         console.log(res.data);
-  //       })
-  //       .catch(err => {
-  //         this.setState({ isLoading: false });
-  //         console.log(err);
-  //       });
-  //   }
-  // };
+  loadBooks = () => {
+    API.getBooks()
+      .then(res => {
+        this.setState({ searchedBooks: res.data });
+        console.log(res.data);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
 
   handleChange = event => {
     event.preventDefault();
@@ -54,7 +49,10 @@ class App extends Component {
     const searchingForBook = this.state.search;
     // Making the api request from google books
     API.getGoogleBooks(searchingForBook)
-      .then(res => this.setState({ searchedBooks: res.data.items }))
+      .then(res => {
+        // this.setState({ searchedBooks: res.data.items });
+        console.log(res.data.items);
+      })
       // .then(res => console.log(res.data.items))
       .catch(err => console.log(err));
     console.log(this.state.search);

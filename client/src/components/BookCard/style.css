@@ -1,3 +1,15 @@
 .bookCardBody {
   background-color: grey;
+  width: 100%;
+  margin: 0 0 20px 0;
+}
+
+.bookTitle {
+  float: left;
+  font-size: 20px;
+}
+
+.googleLink {
+  font-size: 10px;
+  width: 50px;
 }

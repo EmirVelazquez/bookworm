@@ -5,7 +5,7 @@ import "./style.css";
 const Nav = props => {
   return (
     <React.Fragment>
-      <nav className="top-nav">
+      <nav className="top-nav z-depth-5">
         <div className="containerHeader">
           <div className="nav-wrapper">
             <div className="row">
