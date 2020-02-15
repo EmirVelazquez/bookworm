@@ -23,7 +23,6 @@ class App extends Component {
     API.getBooks()
       .then(res => {
         this.setState({ savedBooks: res.data });
-        console.log(res.data);
       })
       .catch(err => {
         console.log(err);
@@ -31,10 +30,24 @@ class App extends Component {
   };
 
   deleteBook = id => {
-    console.log(id);
-    // API.deleteOneBook(id)
-    //   .then(res => this.loadBooks())
-    //   .catch(err => console.log(err));
+    API.deleteOneBook(id)
+      .then(res => this.loadBooks())
+      .catch(err => console.log(err));
+  };
+
+  saveBook = book => {
+    API.saveOneBook(book)
+      .then(res => {
+        // Array prototype method to filter out the book that is saved from the current searchedbooks array
+        const searchedBooks = this.state.searchedBooks.filter(searchedBook => {
+          // Make sure none of the id's in the array are the same as the one saved, return the others except for the saved one
+          if (searchedBook.id !== res.data.googleIdentifier) {
+            return searchedBook;
+          }
+        });
+        this.setState({ searchedBooks });
+      })
+      .catch(err => console.log(err));
   };
 
   handleChange = event => {
@@ -57,11 +70,10 @@ class App extends Component {
     // Making the api request from google books
     API.getGoogleBooks(searchingForBook)
       .then(res => {
-        console.log(res.data.items);
         this.setState({ searchedBooks: res.data.items });
+        console.log(res.data.items);
       })
       .catch(err => console.log(err));
-    console.log(this.state.search);
     // Emptying the search state so user can search for a new book should they choose to
     this.setState({ search: "" });
   };
@@ -84,7 +96,11 @@ class App extends Component {
                 exact
                 path="/"
                 render={props => (
-                  <Books {...props} userSearch={this.state.searchedBooks} />
+                  <Books
+                    {...props}
+                    userSearch={this.state.searchedBooks}
+                    askParentToSave={this.saveBook}
+                  />
                 )}
               />
               <Route
@@ -94,7 +110,7 @@ class App extends Component {
                   <Saved
                     {...props}
                     userSaved={this.state.savedBooks}
-                    askParentToDelete={() => this.deleteBook(props._id)}
+                    askParentToDelete={this.deleteBook}
                   />
                 )}
               />

@@ -33,7 +33,7 @@ const Saved = props => {
               bookSynopsis={book.synopsis}
               bookImage={book.image}
               bookLink={book.link}
-              onDeleteBtnClick={book.askParentToDelete}
+              onDeleteBtnClick={() => props.askParentToDelete(book._id)}
             />
           ))}
         </div>

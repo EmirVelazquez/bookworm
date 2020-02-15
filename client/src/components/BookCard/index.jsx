@@ -46,7 +46,7 @@ const BookCard = props => {
               ) : (
                 <button
                   className="btn-floating saveBtn"
-                  onClick={() => this.onSavedBtnClick}
+                  onClick={props.onSavedBtnClick}
                 >
                   <i className="material-icons saveIcon">save_alt</i>
                 </button>

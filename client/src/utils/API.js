@@ -9,6 +9,10 @@ export default {
   deleteOneBook: function(id) {
     return axios.delete("/api/books/" + id);
   },
+  // Path to save a book to the database
+  saveOneBook: function(bookData) {
+    return axios.post("/api/books/", bookData);
+  },
   // Path for requesting books from Google Books API
   getGoogleBooks: function(book) {
     return axios.get("/api/books/getbook/" + book);

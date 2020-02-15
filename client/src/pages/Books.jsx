@@ -30,9 +30,9 @@ const Books = props => {
           {props.userSearch.map((book, i) => (
             <BookCard
               key={"result" + i}
-              googleId={book.id ? book.id : null}
+              googleId={book.id ? book.id : "googlestring" + i}
               bookTitle={
-                book.volumeInfo.title.length > 0
+                book.volumeInfo.title
                   ? book.volumeInfo.title
                   : "No Book Title Found"
               }
@@ -56,7 +56,28 @@ const Books = props => {
                   ? book.volumeInfo.infoLink
                   : "https://books.google.com/"
               }
-              onSavedBtnClick={() => this.saveOneBook(book.id)}
+              onSavedBtnClick={() =>
+                props.askParentToSave({
+                  title: book.volumeInfo.title
+                    ? book.volumeInfo.title
+                    : "No Book Title Found",
+                  author: book.volumeInfo.authors
+                    ? book.volumeInfo.authors[0]
+                    : "No Author/s Found",
+                  synopsis: book.volumeInfo.description
+                    ? book.volumeInfo.description
+                    : "No Synopsis Available",
+                  image: book.volumeInfo.imageLinks
+                    ? book.volumeInfo.imageLinks.thumbnail
+                    : PlaceHolder,
+                  link: book.volumeInfo.infoLink
+                    ? book.volumeInfo.infoLink
+                    : "https://books.google.com/",
+                  googleIdentifier: book.id ? book.id : "googlestring" + i,
+                  date: new Date(Date.now()),
+                  saved: true
+                })
+              }
             />
           ))}
         </div>
