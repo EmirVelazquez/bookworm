@@ -71,7 +71,6 @@ class App extends Component {
     API.getGoogleBooks(searchingForBook)
       .then(res => {
         this.setState({ searchedBooks: res.data.items });
-        console.log(res.data.items);
       })
       .catch(err => console.log(err));
     // Emptying the search state so user can search for a new book should they choose to
