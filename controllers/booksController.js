@@ -36,7 +36,7 @@ module.exports = {
       .get(
         "https://www.googleapis.com/books/v1/volumes?q=" +
           req.params.book +
-          "&maxResults=6&printType=books&key=" +
+          "&maxResults=5&printType=books&key=" +
           API_KEY
       )
       .then(function(response) {

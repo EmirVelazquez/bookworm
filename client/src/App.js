@@ -4,7 +4,6 @@ import API from "./utils/API";
 import Nav from "./components/Nav";
 import Books from "./pages/Books";
 import Saved from "./pages/Saved";
-import About from "./pages/About";
 import No404 from "./pages/No404";
 import Footer from "./components/Footer";
 import "./App.css";
@@ -13,7 +12,7 @@ class App extends Component {
   state = {
     searchedBooks: [], // Array used to hold the searches results
     search: "", // Flag state for searches
-    savedBooks: []
+    savedBooks: [] // Array used to hold the saved books
   };
 
   componentDidMount = () => {
@@ -23,12 +22,18 @@ class App extends Component {
   loadBooks = () => {
     API.getBooks()
       .then(res => {
-        this.setState({ searchedBooks: res.data });
+        this.setState({ savedBooks: res.data });
         console.log(res.data);
       })
       .catch(err => {
         console.log(err);
       });
+  };
+
+  deleteOneBook = id => {
+    API.deleteOneBook(id)
+      .then(res => this.loadBooks())
+      .catch(err => console.log(err));
   };
 
   handleChange = event => {
@@ -45,15 +50,15 @@ class App extends Component {
     if (event) {
       event.preventDefault();
     }
+    this.setState({ searchedBooks: [] });
     // Placing the current search in a const for simplicity
     const searchingForBook = this.state.search;
     // Making the api request from google books
     API.getGoogleBooks(searchingForBook)
       .then(res => {
-        // this.setState({ searchedBooks: res.data.items });
         console.log(res.data.items);
+        this.setState({ searchedBooks: res.data.items });
       })
-      // .then(res => console.log(res.data.items))
       .catch(err => console.log(err));
     console.log(this.state.search);
     // Emptying the search state so user can search for a new book should they choose to
@@ -74,7 +79,6 @@ class App extends Component {
         <Router>
           <main>
             <Switch>
-              <Route exact path="/saved" component={Saved} />
               <Route
                 exact
                 path="/"
@@ -82,7 +86,13 @@ class App extends Component {
                   <Books {...props} userSearch={this.state.searchedBooks} />
                 )}
               />
-              <Route exact path="/about" component={About} />
+              <Route
+                exact
+                path="/saved"
+                render={props => (
+                  <Saved {...props} userSaved={this.state.savedBooks} />
+                )}
+              />
               <Route path="*" component={No404} />
             </Switch>
           </main>

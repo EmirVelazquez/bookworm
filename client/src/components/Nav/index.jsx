@@ -66,11 +66,6 @@ const Nav = props => {
             Saved
           </a>
         </li>
-        <li className="bold">
-          <a href="/about" className="sidenav-close waves-effect waves-teal">
-            About
-          </a>
-        </li>
       </ul>
     </React.Fragment>
   );

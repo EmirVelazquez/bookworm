@@ -1,7 +1,6 @@
 .bookCardBody {
-  background-color: grey;
-  width: 100%;
-  margin: 0 0 20px 0;
+  height: 100%;
+  margin: 0 0 50px 0;
 }
 
 .bookTitle {
@@ -9,7 +8,61 @@
   font-size: 20px;
 }
 
+.bookAuthor {
+  float: right;
+  font-size: 20px;
+}
+
+.bookSynopsis {
+  text-align: left;
+  font-size: 16px;
+}
+
+.bookImg {
+  border: 1px solid #000000;
+}
+
 .googleLink {
   font-size: 10px;
   width: 50px;
+}
+
+.card .card-action,
+.card-image,
+.cardInfo,
+.bookCardBody,
+.card-stacked {
+  color: #000000;
+  background-color: #ffa6b2;
+}
+
+.cardInfo {
+  padding: 0 10px 0 10px;
+}
+
+.googleLogoBtn,
+.googleLogoBtn:hover,
+.googleLogoBtn:visited {
+  float: right;
+  background-color: #ffffff;
+  margin: 0 0 0 10px;
+}
+
+.saveBtn,
+.deleteBtn {
+  background-color: #ff5d73;
+  float: right;
+}
+
+.saveBtn:hover,
+.deleteBtn:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.googleLogo {
+  width: 40px;
+  height: 40px;
+  align-self: center;
+  border-radius: 50%;
 }
