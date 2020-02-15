@@ -30,10 +30,11 @@ class App extends Component {
       });
   };
 
-  deleteOneBook = id => {
-    API.deleteOneBook(id)
-      .then(res => this.loadBooks())
-      .catch(err => console.log(err));
+  deleteBook = id => {
+    console.log(id);
+    // API.deleteOneBook(id)
+    //   .then(res => this.loadBooks())
+    //   .catch(err => console.log(err));
   };
 
   handleChange = event => {
@@ -90,7 +91,11 @@ class App extends Component {
                 exact
                 path="/saved"
                 render={props => (
-                  <Saved {...props} userSaved={this.state.savedBooks} />
+                  <Saved
+                    {...props}
+                    userSaved={this.state.savedBooks}
+                    askParentToDelete={() => this.deleteBook(props._id)}
+                  />
                 )}
               />
               <Route path="*" component={No404} />

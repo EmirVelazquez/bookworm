@@ -56,6 +56,7 @@ const Books = props => {
                   ? book.volumeInfo.infoLink
                   : "https://books.google.com/"
               }
+              onSavedBtnClick={() => this.saveOneBook(book.id)}
             />
           ))}
         </div>

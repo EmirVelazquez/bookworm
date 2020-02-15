@@ -24,4 +24,30 @@ body {
 
 main {
   flex: 1 0 auto;
+  min-height: 100vh;
+}
+
+.page-footer {
+  background-color: #ff5d73;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 -30px 38px -10px rgba(0, 0, 0, 0.22);
+}
+
+.footerHeader {
+  float: right;
+  font-size: 20px;
+}
+
+.footer-copyright {
+  float: right;
+}
+
+.gitHub {
+  margin: 0 20px 0 20px;
+}
+
+.linkedIn {
+  margin: 0 10px 0 0;
 }

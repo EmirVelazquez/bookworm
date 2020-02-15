@@ -39,12 +39,15 @@ const BookCard = props => {
               {props.bookId ? (
                 <button
                   className="btn-floating deleteBtn"
-                  onClick={() => this.deleteOneBook(props.bookId)}
+                  onClick={props.onDeleteBtnClick}
                 >
                   <i className="material-icons saveIcon">delete_forever</i>
                 </button>
               ) : (
-                <button className="btn-floating saveBtn">
+                <button
+                  className="btn-floating saveBtn"
+                  onClick={() => this.onSavedBtnClick}
+                >
                   <i className="material-icons saveIcon">save_alt</i>
                 </button>
               )}
