@@ -1,6 +1,6 @@
 ## Bookworm
 
-A web full stack web application that allows users to search for any book and then save them to a Mongo Database. The web application has a search box for the searches and a home page that displays the results. The saved path allows users to view the current saved books.
+Full stack web application that allows users to search for any book and then save them to a Mongo Database. The web application has a search box for the searches and a home page that displays the results. The saved path allows users to view the current saved books.
 
 ## Technologies Utilized
 
