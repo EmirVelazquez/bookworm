@@ -5,13 +5,16 @@ Full stack web application that allows users to search for any book and then sav
 ## Technologies Utilized
 
 - React
-- React Router
 - JavaScript
-- Mongo DB
-- Mongoose
-- Express
+- HTML
+- Materialize
+- CSS
+- MongoDB
 - Node.js
+- Express
 - Axios
+- .env
+- Google API's
 - Heroku (Hosting)
 
 ## User Instructions Detailed
